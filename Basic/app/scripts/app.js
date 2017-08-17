@@ -33,32 +33,32 @@ angular
     'angularMoment',
     'chart.js'
   ])
-  .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("home");
-    $stateProvider
-      .state('home', {
-        url:"/",
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
-      .state('dashboard', {
-        url:"/dashboard",
-        templateUrl: 'views/dashboard.html',
-        controller: 'DashboardCtrl'
-      })
-      .state('dataModel', {
-        url:"/dataModel",
-        templateUrl: 'views/dataModel.html',
-        controller: 'DataModelCtrl'
-      })
-      .state('operation', {
-        url:"/operation",
-        templateUrl: 'views/operation.html',
-        controller: 'OperationCtrl'
-      })
-      .state('setting', {
-        url:"/setting",
-        templateUrl: 'views/main.html',
-        controller: 'SettingCtrl'
-      });
-  });
+  //.config(function ($stateProvider, $urlRouterProvider) {
+  //  $urlRouterProvider.otherwise("home");
+  //  $stateProvider
+  //    .state('home', {
+  //      url:"/",
+  //      templateUrl: 'views/main.html',
+  //      controller: 'MainCtrl'
+  //    })
+  //    .state('dashboard', {
+  //      url:"/dashboard",
+  //      templateUrl: 'views/dashboard.html',
+  //      controller: 'DashboardCtrl'
+  //    })
+  //    .state('dataModel', {
+  //      url:"/dataModel",
+  //      templateUrl: 'views/dataModel.html',
+  //      controller: 'DataModelCtrl'
+  //    })
+  //    .state('operation', {
+  //      url:"/operation",
+  //      templateUrl: 'views/operation.html',
+  //      controller: 'OperationCtrl'
+  //    })
+  //    .state('setting', {
+  //      url:"/setting",
+  //      templateUrl: 'views/main.html',
+  //      controller: 'SettingCtrl'
+  //    });
+  //});
