@@ -3,6 +3,7 @@
     <div class="login-wrop">
       <div class="login-title">{{loginaccount | translate}}</div>
       <div class="login-con mgt">
+          <p class="error_tit" ng-if="error_name">用户名或者密码有误，请重新输入。</p>
         <div class="row prompt mgt">
           <div class="col-md-6 text-l">{{loginname | translate}}</div>
           <div class="col-md-6 text-r err-text" ng-if="frm.username.$dirty && frm.username.$invalid">
