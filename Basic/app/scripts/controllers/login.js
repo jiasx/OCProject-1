@@ -23,15 +23,22 @@ angular.module('basic')
     //enter 进入页面
     $scope.enterLogin = (e) => {
       if (e.keyCode == 13) {
-        //$state.go('dataExplore');
-        if ($scope.usermessage.password !== undefined) {
-          $rootScope.login($scope.usermessage.username, $scope.usermessage.password);
+        $rootScope.error_name = false;
+        if ($scope.usermessage.username == '' || $scope.usermessage.password == '') {
+          $rootScope.error_name = true;
+        }else{
+          $state.go('console.tenant');
         }
       }
     };
 
     $scope.gologin=()=> {
-      $state.go('console.tenant');
+      $rootScope.error_name = false;
+      if ($scope.usermessage.username == '' || $scope.usermessage.password == '') {
+        $rootScope.error_name = true;
+      }else{
+        $state.go('console.tenant');
+      }
     }
 
     $scope.register = () => {

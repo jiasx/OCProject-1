@@ -33,9 +33,10 @@ angular
     'angularMoment',
     'chart.js',
     'ui.router.state.events',
-    'basic.router'
+    'basic.router',
+    
     // 'basic.resource',
-    // 'basic.services',
+    'basic.services'
     // 'basic.controller',
     // 'basic.filter'
   ])

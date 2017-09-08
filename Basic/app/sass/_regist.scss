@@ -111,12 +111,14 @@
           width: 418px;
           height: 38px;
           border-radius: 2px;
-          border: 1px solid #4874ff;
+          //border: 1px solid #4874ff;
           background: #4874ff;
           font-size: 16px;
-          font-weight: bold;
-          color: #ffffff;
+          color:#fff;
+          font-weight: normal;
+         opacity:1;filter:alpha(opacity=100);
         }
+        .btn.disabled{cursor:not-allowed!important;}
 
         .btn:hover {
           background: #3c63d9;
@@ -165,3 +167,71 @@
   background: #dadfec;
   color: #5a6378;
 }
+
+.faa {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  background: url(../images/icon.png);
+  margin-right: 2px;
+}
+
+.faa-check {
+  background-position: -16px -220px;
+  width: 15px;
+  height: 15px;
+}
+
+.active > .faa-check {
+  background-position: -41px -220px;
+}
+
+.btn.disabled{pointer-events:none;
+}
+
+.textConfirm {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #666666;
+}
+.titleLogin:focus{text-decoration:none;}
+.confirm_set{text-decoration: none;color: #5a6378;font-size: 14px;cursor:pointer;}
+.btn-orange {
+  background-color: #4874ff;
+  color:#fff;
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  transition:all 1s;
+}
+.btn-orange:hover {
+  background-color: #3c63d9;
+  color:#fff;
+}
+.btn-disabled, .btn-disabled:hover {
+  background: #ccc!important;
+  color: #fff;cursor:not-allowed;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus{outline: auto;outline-offset:0;box-shadow:none;}
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn{pointer-events:auto;cursor:not-allowed}
+
+input:focus{
+  border-color: #4874ff !important;
+  background:#eff3f4!important;
+}
+
+.active .no-me{
+  background:url("../images/check_active.png") no-repeat;
+}
+.no-me{
+  background:url("../images/check_nor.png") no-repeat;
+}
+.login_forget{margin-top:20px;font-size:14px;width:100px;cursor:pointer;}
+.ta-cd{
+  width: 14px;
+  height: 14px;
+  margin:0;
+  padding:0;
+  margin-right:8px;float:left;
+  cursor: pointer;margin-top:3px;
+}
+.form-control{border:1px solid #eaeaea;border-radius:0px;background:#f7f8fa;box-shadow:none;}
