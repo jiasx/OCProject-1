@@ -50,16 +50,35 @@ angular
     }
   }])
 
-  .run(['$rootScope', '$state',
-  function ($rootScope, $state) {
+  .run(['$rootScope', '$state','$http','$cookies','$location',
+  function ($rootScope, $state,$http,$cookies,$location) {
 
    
     // 路由跳转
     $rootScope.$on('$stateChangeStart', function (event, toState) {
       console.log('toState', toState.name);
       $rootScope.tab = toState.name;
+      $rootScope.username = $cookies.get('username');
      
     });
+
+
+    //登录接口
+    $rootScope.gologin = (username, password) => {
+      $http.post('/api/user/login/', { username, password }).success(function(user) {
+        $rootScope.error_name = false;
+        if (user.status) {
+          console.log('LOGIN SUCCESS!');
+          $cookies.put('username', username);
+          $location.path('/tenant');
+          $rootScope.iflogin = true;
+          $rootScope.username = $cookies.get("username");
+        } else {
+          $rootScope.error_name = true;
+          //console.log('LOGIN FAILED!please, use login name:ocai and pass:123456');
+        }
+      })
+    }
 
 
   
