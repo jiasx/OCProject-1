@@ -32,14 +32,22 @@ angular.module('basic')
       }
     };
 
-    $scope.gologin=()=> {
-      $rootScope.error_name = false;
-      if ($scope.usermessage.username == '' || $scope.usermessage.password == '') {
-        $rootScope.error_name = true;
-      }else{
-        $state.go('console.tenant');
+    // $scope.gologin=()=> {
+    //   $rootScope.error_name = false;
+    //   if ($scope.usermessage.username == '' || $scope.usermessage.password == '') {
+    //     $rootScope.error_name = true;
+    //   }else{
+    //     $state.go('console.tenant');
+    //   }
+    // }
+
+    $scope.gologin = () => {
+      //$state.go('dataExplore');
+      if ($scope.usermessage.password !== undefined) {
+        $rootScope.gologin($scope.usermessage.username, $scope.usermessage.password);
+
       }
-    }
+    };
 
     $scope.register = () => {
       $state.go('regist');

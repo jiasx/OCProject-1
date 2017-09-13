@@ -8,5 +8,6 @@ angular.module('basic')
     $scope.logout = () => {
       $state.go('login');
     };
+    
 
   }]);
