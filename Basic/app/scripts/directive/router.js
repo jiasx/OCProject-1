@@ -5,15 +5,9 @@
 
 angular.module('basic.router', ['ui.router'])
   .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/console/tenant");
+    $urlRouterProvider.otherwise("console/tenant");
     $stateProvider
-      //登录入口
-      .state('homeIndex', {
-        url: '/',
-        templateUrl: 'views/homeIndex.html',
-        controller: 'HomeCtrl',
-        resolve: {}
-      })
+     
       // 注册
       .state('regist', {
         url: "/regist",
@@ -26,36 +20,33 @@ angular.module('basic.router', ['ui.router'])
         templateUrl: 'views/login.html',
         controller: 'loginCtrl'
       })
-      // 虚拟路由
+      // 登录前虚拟路由
       .state('console', {
         url: '/console',
         templateUrl: 'views/console.html',
         controller: 'ConsoleCtrl',
-        abstract: true,
-        resolve: {
-
-        }
+        abstract: true
 
       })
       // 租户管理
       .state('console.tenant', {
         url: '/tenant',
         templateUrl: 'views/tenant.html',
-        controller: 'TenantCtrl',
+        controller: 'TenantCtrl'
 
       })
       // 用户管理
       .state('console.user', {
         url: '/user',
         templateUrl: 'views/user.html',
-        controller: 'UserCtrl',
+        controller: 'UserCtrl'
 
       })
       // 角色管理
       .state('console.role', {
         url: '/role',
         templateUrl: 'views/role.html',
-        controller: 'RoleCtrl',
+        controller: 'RoleCtrl'
 
       })
 
@@ -63,9 +54,28 @@ angular.module('basic.router', ['ui.router'])
       .state('console.service', {
         url: '/service',
         templateUrl: 'views/service.html',
-        controller: 'ServiceCtrl',
+        controller: 'ServiceCtrl'
 
       })
+
+      // 登录后虚拟路由
+      .state('home', {
+        url: '/home',
+        templateUrl: 'views/home.html',
+        controller: 'HomeCtrl',
+        abstract: true
+
+      })
+
+       // 角色管理
+       .state('home.dashboard', {
+        url: '/dashboard',
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
+
+      })
+
+
 
 
 

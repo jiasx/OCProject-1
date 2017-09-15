@@ -12,22 +12,10 @@
 
         <div class="collapse navbar-collapse" id="js-navbar-collapse">
 
-          <form class="navbar-form navbar-right">
-            <div class="data_bg header_area_select head_index">
-              <div uib-dropdown="" on-toggle="toggled(open)" class="dropdown open">
-                <a href="javascript:void(0);" class="per_block dropdown-toggle" uib-dropdown-toggle=""
-                   aria-haspopup="true" aria-expanded="true">
-                  <span class="header_per_tit" title="angyan0103">{{username}}</span>
-                  <span class="xl_bg"></span>
-                </a>
-                <ul class="dropdown-menu index_area_drop" uib-dropdown-menu="" aria-labelledby="user-menu">
-                  <li><a href="javascript:void(0);"><span>修改密码</span></a></li>
-                  <li class="zx_active"><a href="javascript:void(0);" ng-click="logout()"><span>退出账户</span></a></li>
-                </ul>
-              </div>
-            </div>
-           
-          </form>
+          <div class="navbar-form navbar-right">
+            <p ng-click="login()">登录</p>
+            <p ng-click="register()">注册</p>
+          </div>
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a ng-class="{true:'active'}[tab === 'console.tenant']" ui-sref="console.tenant">

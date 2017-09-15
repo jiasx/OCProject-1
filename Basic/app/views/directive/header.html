@@ -1,0 +1,59 @@
+<div class="header">
+    <span us-spinner spinner-key="spinner"></span>
+    <div class="navbar navbar-oc" role="navigation" data-spy="affix">
+      <div class="container-fluid">
+        <div class="head_set">
+          <div class="navbar-header">
+            <a ui-sref="console.tenant" class="navbar-brand logo">
+              <img src="./images/logo-white.png" style="height: 41px;width:41px" alt="橘云 多租户管控平台" title="橘云 多租户管控平台">
+              <img src="./images/logo.png" style="height: 41px;width:282px" alt="橘云 多租户管控平台" title="橘云 多租户管控平台">
+            </a>
+          </div>
+  
+          <div class="collapse navbar-collapse" id="js-navbar-collapse">
+  
+            <div class="navbar-form navbar-right">
+              <p ng-click="login()">登录</p>
+              <p ng-click="register()">注册</p>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+                <a ng-class="{true:'active'}[tab === 'console.tenant']" ui-sref="console.tenant">
+                  <span>租户管理</span>
+                </a>
+              </li>
+              <li>
+  
+                <a ng-class="{true:'active'}[tab === 'console.user']" ui-sref="console.user">
+                  <!--<span class="glyphicon glyphicon-list"></span>-->
+                  <span>用户管理</span>
+                </a>
+              </li>
+              <li>
+  
+  
+                <a ng-class="{true:'active'}[tab === 'console.role']" ui-sref="console.role">
+  
+                  <!--<span class="glyphicon glyphicon-list"></span>-->
+                  <span>角色管理</span>
+                </a>
+              </li>
+              <li>
+                <a ng-class="{true:'active'}[tab === 'console.service']" ui-sref="console.service">
+                  <!--<span class="glyphicon glyphicon-cog"></span>-->
+                  <span>服务管理</span>
+                </a>
+              </li>
+  
+  
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="container-fluid" style="background:#fafafa;padding-top:40px;">
+      <div ui-view></div>
+  </div>
+  

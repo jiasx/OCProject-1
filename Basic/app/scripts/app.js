@@ -70,6 +70,7 @@ angular
         if (user.status) {
           console.log('LOGIN SUCCESS!');
           $cookies.put('username', username);
+          alert(1);
           $location.path('/tenant');
           $rootScope.iflogin = true;
           $rootScope.username = $cookies.get("username");

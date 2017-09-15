@@ -2,7 +2,6 @@
 @import "service";
 @import "regist";
 @import "login";
-@import "homeIndex";
 //卡片标题颜色、textarea字体颜色
 $titcolor:#333 !default;//定义全局变量
 $smbg:#c256fc!default;
@@ -123,7 +122,9 @@ body {
   background:none;color:#d5d5d5;border:0;
 }
 
-.navbar-form{border-left:1px solid #dfdfdf;margin-top:0;margin-bottom:0;padding-right:0;padding-left:0;}
+.navbar-form{border-left:1px solid #dfdfdf;margin-top:0;margin-bottom:0;padding-right:0;padding-left:10px;}
+.navbar-form p{float:left;width:60px;height:30px;line-height:30px;border:1px solid #ccc;text-align:center;
+margin-top:26px;margin-bottom:22px;margin-right:10px;cursor:pointer;}
 
 .set_text_ellipsis{white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;overflow: hidden;}
 .console_name p{margin-bottom:0;font-size:16px;color:$titcolor;display:block;width:100px;}

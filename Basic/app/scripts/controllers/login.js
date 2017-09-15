@@ -27,7 +27,7 @@ angular.module('basic')
         if ($scope.usermessage.username == '' || $scope.usermessage.password == '') {
           $rootScope.error_name = true;
         }else{
-          $state.go('console.tenant');
+          $state.go('home.dashboard');
         }
       }
     };
